@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.M.K.E.C Symposium</title>
+    <!-- Include fullPage.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.css" />
+  <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .section {
+            text-align: center;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #about,
+        #about-us,
+        #about-us2,
+        #about-us3,
+        #about-us4,
+        #about-us5,
+        #about-us6,
+        #about-us7 {
+            background-color: #fff;
+            min-height: 100vh;
+        }
+
+        #welcome,
+        #folks,
+        #about-us-heading,
+        #about-us-content,
+        #about-us-heading2,
+        #about-us-content2,
+        #about-us-heading3,
+        #about-us-content3,
+        #about-us-heading4,
+        #about-us-content4,
+        #about-us-heading5,
+        #about-us-content5,
+        #about-us-heading6,
+        #about-us-content6,
+        #about-us-heading7,
+        #about-us-content7 {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        #about-us,
+        #about-us2,
+        #about-us3,
+        #about-us4,
+        #about-us5,
+        #about-us6,
+        #about-us7 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: justify;
+            min-height: 100vh;
+            background: url('6.png') center/cover;
+            position: relative;
+        }
+
+        #about-us:after,
+        #about-us2:after,
+        #about-us3:after,
+        #about-us4:after,
+        #about-us5:after,
+        #about-us6:after,
+        #about-us7:after {
+            content: "";
+            display: inline-block;
+            width: 50%;
+        }
+
+        #about-us-image,
+        #about-us-image2,
+        #about-us-image3,
+        #about-us-image4,
+        #about-us-image5,
+        #about-us-image6,
+        #about-us-image7 {
+            opacity: 0;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 50%;
+            object-fit: cover;
+            width: 50%;
+        }
+     #about {
+            background-image: url('5.png'); /* Replace 'your-first-background-image-url.jpg' with the URL of the first background image */
+ background-size: cover; /* Ensure the background image covers the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; 
+        }
+
+        /* Set individual padding for each page content */
+        #about-us {
+            padding: 0 40% 0 5%;
+            margin-bottom: 5%;
+            font-style: Verdana; /* Font style */
+            font-size: 1.3em;
+        }
+
+        #about-us2 {
+            padding: 0 40% 0 5%;
+            margin-bottom: 5%;
+            font-style: Verdana; /* Font style */
+            font-size: 1.3em;
+        }
+
+        #about-us3 {
+            padding: 0 40% 0 5%;
+            margin-bottom: 5%;
+            font-style: Verdana; /* Font style */
+            font-size: 1.3em;
+        }
+
+        #about-us4 {
+            padding: 0 40% 0 5%;
+            margin-bottom: 5%;
+            font-style: Verdana; /* Font style */
+            font-size: 1.3em;
+        }
+
+        #about-us5 {
+            padding: 0 40% 0 5%;
+            margin-bottom: 5%;
+            font-style: Verdana; /* Font style */
+            font-size: 1.3em;
+        }
+
+        #about-us6 {
+            padding: 0 40% 0 5%;
+            margin-bottom: 5%;
+            font-style: Verdana; /* Font style */
+            font-size: 1.3em;
+        }
+
+        #about-us7 {
+            padding: 0 40% 0 5%;
+            margin-bottom: 5%;
+            font-style: Verdana; /* Font style */
+            font-size: 1.3em;
+        }
+
+        /* Set individual padding for each image */
+        #about-us-image {
+            width: 40%; /* Adjust this value to control the width of the image */
+            margin-right: 10%;
+            padding-top: 10%;
+            padding-bottom: 15%;
+        }
+
+        #about-us-image2 {
+            width: 40%; /* Adjust this value to control the width of the image */
+            margin-right: 10%;
+            padding-top: 9%;
+            padding-bottom: 10%;
+        }
+
+        #about-us-image3 {
+            width: 40%; /* Adjust this value to control the width of the image */
+            margin-right: 10%;
+            padding-top: 1.5%;
+            padding-bottom: 1.5%;
+        }
+
+        #about-us-image4 {
+            width: 40%; /* Adjust this value to control the width of the image */
+            margin-right: 10%;
+            padding-top: 10%;
+            padding-bottom: 15%;
+        }
+
+        #about-us-image5 {
+            width: 40%; /* Adjust this value to control the width of the image */
+            margin-right: 10%;
+            padding-top: 8%;
+            padding-bottom: 17%;
+        }
+
+        #about-us-image6 {
+            width: 40%; /* Adjust this value to control the width of the image */
+            margin-right: 10%;
+            padding-top: 10%;
+            padding-bottom: 15%;
+        }
+
+        #about-us-image7 {
+            width: 40%; /* Adjust this value to control the width of the image */
+            margin-right: 10%;
+            padding-top: 15%;
+            padding-bottom: 20%;
+        }
+
+  p {
+    line-height: 1.5; /* Adjust the line height as needed */
+color: white;
+  }
+h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, shadow color */
+color: white;
+}
+
+/* Add text shadow to p (paragraph) elements */
+p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Horizontal offset, vertical offset, blur radius, shadow color */
+color: white;
+}
+    </style>
+</head>
+<body>
+
+    <div id="fullpage">
+        <div class="section" id="about">
+            
+        </div>
+
+        <div class="section" id="about-us">
+            <h2 id="about-us-heading">About Us:</h2>
+            <p id="about-us-content">BLITZKRIEG is a prestigious national-level technical symposium hosted by the Electrical and Electronics Engineering (EEE) department of RMK Engineering College. 
+is event provides a platform for students from across the country to participate in a series of technical and non-technical events designed to enhance their knowledge and skills. Participants have the opportunity to engage in various competitions, workshops, and seminars, where they can showcase their talents, learn from experts, and network with peers. BLITZKRIEG aims to foster innovation, creativity, and technical excellence among students while providing a fun and competitive environment.</p>
+            <img id="about-us-image" src="https://i.ibb.co/ZJKC9pL/aboutus.jpg" alt="About Us Image">
+        </div>
+
+        <div class="section" id="about-us2">
+            <h2 id="about-us-heading2">Electro-Exposition</h2>
+            <p id="about-us-content2">BLITZKRIEG's Technical Paper Presentation is where innovation meets expertise, offering students a stage to showcase their research and ideas in electrical and electronics engineering. It's a dynamic forum fueling academic excellence and sparking intellectual discussions.
+<br><b>Submission Deadline: </b>Paper abstracts must be submitted before <b> 31.01.2024</b> using the provided Google Form.
+<br><b>Approval Notification:</b> Selected papers will receive approval notifications sent to the students.
+<br><b>Event Timing:</b> The event is scheduled <b>from 10:00 AM to 10:45 AM.</b>
+<br><b>Venue: PV Block Lab-1.</b></p>
+            <img id="about-us-image2" src="https://i.ibb.co/ZJq0NwW/image.png" alt="About Us Image">
+        </div>
+
+        <!-- Repeat Sections 3-7 similarly with different headings -->
+        <div class="section" id="about-us3">
+            <h2 id="about-us-heading3">InnoFest Showcase</h2>
+            <p id="about-us-content3">BLITZKRIEG's Technical Project Presentation is where innovation takes the spotlight, showcasing students' engineering projects from concept to reality. It's a hub for tech skills, problem-solving, and practical knowledge, fostering creativity, collaboration, and excellence in engineering endeavors.
+<br><b>Event Timing: </b>The event is scheduled from 10:45 AM to 11:30 AM.
+<br><b>Venue:</b> PV Block Lab-2.
+<br><b>Button- gform link.</b></p>
+            <img id="about-us-image3" src="https://i.ibb.co/gJLJyhg/image.png" alt="About Us Image">
+        </div>
+
+        <div class="section" id="about-us4">
+            <h2 id="about-us-heading4">Elec-Enma Quest</h2>
+            <p id="about-us-content4">Join the excitement at BLITZKRIEG's Technical Quiz! It's a brain-busting showdown in electrical and electronics engineering. Get ready to compete, show off your skills, and win big. It's knowledge meets fun in this ultimate quiz challenge!.
+<br><b>Team Event</b> – 2 Participants
+<br><b>Event Timing:</b> The event is scheduled from 11:30 AM to 12:00 AM.
+<br><b>Venue:</b> PV Block Lab-3.
+<br><b>Button- gform link.</b></p>
+            <img id="about-us-image4" src="https://i.ibb.co/Xb8vP6q/image.png" alt="About Us Image">
+        </div>
+
+        <div class="section" id="about-us5">
+            <h2 id="about-us-heading5">Elec-Tag Thrill</h2>
+            <p id="about-us-content5">At BLITZKRIEG, Laser Tag is your chance to break free from the tech zone and dive into an action-packed game of strategy and skill. Grab your infrared gun, tag your opponents, and experience the thrill of combat in a safe, fun environment. It's more than just a game—it's a chance to unwind, bond with friends, and add some excitement to your symposium experience!.
+<br><b>Event Timing: </b>The event is scheduled from 1:00 PM to 1:30 PM.
+<br><b>Venue: </b>PV Block Lab-4.
+<br><b>Button- gform link </b></p>
+            <img id="about-us-image5" src="https://i.ibb.co/8K1RFcC/image.png" alt="About Us Image">
+        </div>
+
+        <div class="section" id="about-us6">
+            <h2 id="about-us-heading6">Circuit Connect</h2>
+            <p id="about-us-content6">"Connections" at BLITZKRIEG is a unique blend of tech and fun, bringing together engaging activities that mix technical skill with playful creativity. From decoding picture puzzles to guessing sounds, it's the perfect mix of brainpower and fun, offering students a chance to relax and connect in a vibrant setting. Join us for a refreshing break that combines the best of both worlds!.
+<br><b>Event Timing:</b> The event is scheduled from 1:30 PM to 2:00 PM.
+<br><b>Venue:</b> PV Block Lab-5.
+<br><b>Button- gform link </b></p>
+            <img id="about-us-image6" src="https://i.ibb.co/ZJKC9pL/aboutus.jpg" alt="About Us Image">
+        </div>
+
+        <div class="section" id="about-us7">
+            <h2 id="about-us-heading7">Last Heading:</h2>
+            <p id="about-us-content7">Same content as before</p>
+            <img id="about-us-image7" src="https://i.ibb.co/sbmVBXX/image.png" alt="About Us Image">
+        </div>
+
+    </div>
+
+    <!-- Include fullPage.js script -->
+    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.js"></script>
+    <script>
+        new fullpage('#fullpage', {
+            sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['Welcome', 'About Us', 'About Us 2', 'About Us 3', 'About Us 4', 'About Us 5', 'About Us 6', 'About Us 7'],
+            showActiveTooltip: true,
+            scrollingSpeed: 1000,
+            scrollOverflow: true,
+            afterLoad: function (origin, destination, direction) {
+                // Reset opacity and transform for elements in the section
+                destination.item.querySelectorAll('h2, p, img').forEach(function (element) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateX(0)';
+                });
+            },
+            afterRender: function () {
+                // Update the height of the first section to match the window height
+                document.getElementById('about').style.minHeight = window.innerHeight + 'px';
+            }
+        });
+    </script>
+</body>
+</html>
